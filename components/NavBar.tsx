@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,7 +110,7 @@ function NavBar() {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-full z-50 font-serif grid grid-rows-[auto,1fr] text-white font-bold tracking-widest overflow-x-hidden">
+    <div className="w-full font-serif z-50 grid grid-rows-[auto,1fr] text-white font-bold tracking-widest overflow-x-hidden">
       {/* Header */}
       <header
         className={`z-50 flex justify-between items-center px-6 py-4 fixed top-0 left-0 w-full transition-colors duration-500 ${
@@ -159,7 +160,12 @@ function NavBar() {
 
         {/* Menu items */}
         <ul className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center md:items-start md:pl-[10%] space-y-6 z-50 pointer-events-auto">
-          {["Work", "About", "Services", "Contact"].map((item, i) => (
+          {[
+            { name: "Work", href: "/work" },
+            { name: "About", href: "/about" },
+            { name: "Services", href: "/services" },
+            { name: "Contact", href: "/contact" },
+          ].map((item, i) => (
             <li
               key={i}
               className="menu-item text-[10vw] md:text-[8vmin] font-bold cursor-pointer relative text-black perspective-[1000px]"
@@ -168,9 +174,13 @@ function NavBar() {
                 transform: "translateY(50px) rotateX(15deg)",
               }}
             >
-              <span className="block transition-transform duration-500 ease-out hover:-rotateX-10 hover:translateY-[-5px] hover:text-gray-600">
-                {item}
-              </span>
+              <Link
+                href={item.href}
+                className="block transition-transform duration-500 ease-out hover:-rotateX-10 hover:translate-y-[-5px] hover:text-gray-600"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
               <span className="absolute left-0 bottom-0 w-full h-[1px] bg-black opacity-50"></span>
             </li>
           ))}
