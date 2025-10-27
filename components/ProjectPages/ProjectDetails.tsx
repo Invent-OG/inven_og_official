@@ -481,10 +481,10 @@ export default function ProjectDetails() {
                   >
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
-                  <div>
+                  <div> 
                     <h4 className="font-semibold mb-1">Development</h4>
                     <p className="text-sm opacity-70">
-                      Agile development with continuous integration
+                      Agile development with continue integration
                     </p>
                   </div>
                 </div>
