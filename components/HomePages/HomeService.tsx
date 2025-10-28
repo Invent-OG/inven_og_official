@@ -112,7 +112,7 @@ export default function HomeService() {
               View all Services
               <ArrowUpRight size={18} className="text-gray-700" />
             </button> */}
-            <button className=" bg-gradient-to-r from-blue-400 to-blue-700 mt-10 text-[#ffffff] inline-flex items-center gap-2 px-6 py-3 border border-gray-400 hover:border-blue-700 rounded-md transition-all transition-all hover:from-blue-700 hover:to-blue-400 hover:shadow-lg">
+            <button className="mb-8 bg-gradient-to-r from-blue-400 to-blue-700 mt-10 text-[#ffffff] inline-flex items-center gap-2 px-6 py-3 border border-gray-400 hover:border-blue-700 rounded-md transition-all transition-all hover:from-blue-700 hover:to-blue-400 hover:shadow-lg">
               View all Services
               <ArrowUpRight size={18} className="text-white" />
             </button>
