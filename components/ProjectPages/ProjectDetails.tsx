@@ -46,30 +46,6 @@ export default function ProjectDetails() {
           ease: "power3.out",
         });
 
-        // Staggered fade-up animations
-        gsap.utils.toArray<HTMLElement>(".fade-up").forEach((el, i) => {
-          gsap.from(el, {
-            opacity: 0,
-            y: 60,
-            duration: 1,
-            delay: i * 0.15,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 85%",
-            },
-          });
-        });
-
-        // Floating elements
-        gsap.to(".floating-element", {
-          y: -20,
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
-
         // Image reveal animation
         gsap.from(".image-reveal", {
           scale: 1.1,
@@ -89,7 +65,7 @@ export default function ProjectDetails() {
   if (!project) {
     return (
       <div
-        className={`min-h-screen flex flex-col items-center justify-center ${
+        className={`min-h-screen  flex flex-col items-center justify-center ${
           isDark ? "bg-black text-white" : "bg-gray-50 text-gray-700"
         }`}
       >
@@ -121,7 +97,7 @@ export default function ProjectDetails() {
       {/* Theme Toggle */}
       <button
         onClick={toggleTheme}
-        className={`fixed top-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg backdrop-blur-sm ${
+        className={`fixed top-24 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg backdrop-blur-sm ${
           isDark
             ? "bg-yellow-400 text-gray-900 hover:bg-yellow-300"
             : "bg-black text-white hover:bg-gray-700"
@@ -361,13 +337,7 @@ export default function ProjectDetails() {
                 alt={`Gallery ${activeImage + 1}`}
                 className="w-full h-full object-cover"
               />
-              <div
-                className={`absolute inset-0 ${
-                  isDark
-                    ? "bg-gradient-to-t from-black/50 to-transparent"
-                    : "bg-gradient-to-t from-white/50 to-transparent"
-                }`}
-              />
+              <div className={`absolute inset-0 ${isDark ? "" : ""}`} />
             </div>
 
             {projectImages.length > 1 && (
@@ -481,7 +451,7 @@ export default function ProjectDetails() {
                   >
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
-                  <div> 
+                  <div>
                     <h4 className="font-semibold mb-1">Development</h4>
                     <p className="text-sm opacity-70">
                       Agile development with continue integration

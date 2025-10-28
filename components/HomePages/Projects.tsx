@@ -16,8 +16,6 @@ function Projects() {
   // Determine how many projects to show initially (3)
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
-  
-
   const addToCardsRef = (el: HTMLDivElement | null) => {
     if (el && !cardsRef.current.includes(el)) {
       cardsRef.current.push(el);
