@@ -27,11 +27,12 @@ function Projects() {
   };
 
   return (
-    <section
-      ref={sectionRef}
-      className="min-h-screen font-serif bg-white py-16 px-4"
-    >
+    <section ref={sectionRef} className="min-h-screen  bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 text-sm font-medium mb-6">
+          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full"></div>
+          Our Projects
+        </div>
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl font-bold text-start text-gray-900 mb-4">
@@ -135,7 +136,7 @@ function Projects() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 bg-blue-700 text-white rounded-xl font-medium hover:bg-blue-600 transition-all duration-300"
+              className="px-6 py-2 bg-[#0049ae] text-white rounded-xl font-medium hover:bg-blue-600 transition-all duration-300"
             >
               {showAll ? "View Less" : "View More"}
             </button>

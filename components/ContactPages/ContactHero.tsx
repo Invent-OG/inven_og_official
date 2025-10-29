@@ -74,7 +74,7 @@ function ContactHero() {
         </p>
         <h1
           ref={titleRef}
-          className="text-[3rem] sm:text-[6rem] md:text-[8rem] font-serif leading-none"
+          className="text-[3rem] sm:text-[6rem] md:text-[8rem]  leading-none"
         >
           CONTACT
         </h1>

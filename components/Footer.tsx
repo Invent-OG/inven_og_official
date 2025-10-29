@@ -122,7 +122,7 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="relative w-full font-serif overflow-hidden bg-gradient-to-br from-blue-900 via-slate-950 to-slate-900"
+      className="relative w-full  overflow-hidden bg-gradient-to-br from-blue-900 via-slate-950 to-slate-900"
     >
       {/* Background SVG Patterns */}
       <div className="absolute inset-0 opacity-10">

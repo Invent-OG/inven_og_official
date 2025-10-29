@@ -109,7 +109,7 @@
 //       {/* Portal Elements */}
 //       <div
 //         ref={portalRef}
-//         className="fixed font-serif w-32 h-32 bg-gradient-to-br from-blue-700 via-blue-700 to-blue-900 rounded-full z-50 pointer-events-none"
+//         className="fixed  w-32 h-32 bg-gradient-to-br from-blue-700 via-blue-700 to-blue-900 rounded-full z-50 pointer-events-none"
 //         style={{
 //           top: "50%",
 //           left: "50%",
@@ -138,7 +138,7 @@
 //       {/* Company Name */}
 //       <div
 //         ref={companyNameRef}
-//         className="fixed top-1/2 font-serif left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none text-center"
+//         className="fixed top-1/2  left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none text-center"
 //         style={{ opacity: 0 }}
 //       >
 //         <h1 className="text-3xl md:text-3xl font-bold text-white drop-shadow-lg">
@@ -265,7 +265,7 @@ export default function PageTransitionOneLayer() {
       {/* Logo */}
       <div
         ref={logoRef}
-        className="absolute font-serif top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
+        className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
       >
         <h1 className="text-4xl font-bold tracking-wider">
           <span className="text-blue-200">INVENT</span>

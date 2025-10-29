@@ -41,7 +41,7 @@ export default function HomeMarquee() {
 
   return (
     <div
-      className="w-full overflow-hidden font-serif bg-white py-8 cursor-pointer"
+      className="w-full overflow-hidden  bg-white py-8 cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

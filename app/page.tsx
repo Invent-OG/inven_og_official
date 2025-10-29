@@ -14,7 +14,7 @@ import React from "react";
 function page() {
   return (
     <>
-      <HeroHome />
+      {/* <HeroHome /> */}
       <HomeVideo />
       <HomeService />
       <HomeMarquee />
@@ -23,7 +23,7 @@ function page() {
       <Rated />
       <Projects />
       <HomeTestimonial />
-      <PricingPlan />
+      {/* <PricingPlan /> */}
       <HomeFaq />
     </>
   );

@@ -9,13 +9,14 @@ export default function HomeService() {
     {
       id: 1,
       title: "Web Design",
-      image: "https://images.pexels.com/photos/326501/pexels-photo-326501.jpeg",
+      image:
+        "https://unblast.com/wp-content/uploads/2020/10/PowerPoint-Presentation-Template-1024x768.jpg",
     },
     {
       id: 2,
       title: "Branding & Identity",
       image:
-        "https://images.pexels.com/photos/7661185/pexels-photo-7661185.jpeg",
+        "https://unblast.com/wp-content/uploads/2023/06/Essential-Branding-Mockup-1024x768.jpg",
     },
     {
       id: 3,
@@ -76,10 +77,10 @@ export default function HomeService() {
   };
 
   return (
-    <section className="bg-white font-serif w-full py-20 flex justify-center">
+    <section className="bg-white  w-full py-20 flex justify-center">
       <div className="max-w-7xl w-full px-6 lg:px-24">
         <div className="inline-flex mb-10 text-black/60 items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm font-medium">
-          <span className="w-2 h-2 bg-blue-700 rounded-full"></span>
+          <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
           SERVICES
         </div>
         {/* Heading */}

@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "unblast.com", // ✅ added this line
+        pathname: "**",
+      },
     ],
   },
 };

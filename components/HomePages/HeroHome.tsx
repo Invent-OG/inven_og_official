@@ -283,7 +283,7 @@ function HeroHome() {
           {/* Main Title */}
           <h1
             ref={titleRef}
-            className="text-4xl font-serif pr-32 md:text-6xl lg:text-7xl font-extrabold text-[#171817] mb-6 leading-tight  tracking-tight"
+            className="text-4xl  pr-32 md:text-6xl lg:text-7xl font-extrabold text-[#171817] mb-6 leading-tight  tracking-tight"
           >
             Turning Ideas <br /> Into Reality
           </h1>
@@ -291,7 +291,7 @@ function HeroHome() {
           {/* Subtitle */}
           <p
             ref={subtitleRef}
-            className="text-xl font-medium font-serif md:text-base text-black/80 mx-auto mb-12 leading-relaxed"
+            className="text-xl font-medium  md:text-base text-black/80 mx-auto mb-12 leading-relaxed"
           >
             We build cutting-edge software solutions that drive growth, <br />{" "}
             enhance efficiency, and transform businesses for the digital age.

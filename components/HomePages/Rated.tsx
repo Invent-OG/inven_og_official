@@ -102,7 +102,7 @@ function Rated() {
   return (
     <section
       ref={sectionRef}
-      className="bg-white font-serif py-24 flex flex-col items-center justify-center"
+      className="bg-white  py-24 flex flex-col items-center justify-center"
     >
       <div className="max-w-6xl w-full px-5 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
         {stats.map((item, index) => (

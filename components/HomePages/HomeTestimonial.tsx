@@ -83,11 +83,11 @@ export default function HomeTestimonial() {
   }, []);
 
   return (
-    <section className="testimonial-section font-serif py-16 md:py-20 bg-white">
+    <section className="testimonial-section  py-16 md:py-20 bg-white">
       {/* Header */}
       <div className="max-w-6xl mx-auto px-6 text-start">
         <div className="inline-flex items-center border border-gray-400 rounded-full p-2 gap-2 mb-4 md:mb-6">
-          <span className="w-2 h-2 bg-blue-700 rounded-full"></span>
+          <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
           <span className="text-black/70 uppercase text-xs md:text-sm font-medium">
             Testimonial
           </span>

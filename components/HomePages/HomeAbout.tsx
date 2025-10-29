@@ -5,13 +5,13 @@ import { Target, Eye, Award } from "lucide-react";
 
 export default function HomeAbout() {
   return (
-    <section className="py-20 px-6 font-serif lg:px-24 bg-white">
+    <section className="py-20 px-6  lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto relative">
         {/* Top section */}
         <div className="flex justify-between items-start mb-12">
           <div>
             <div className="inline-flex mb-10 text-black/60 items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm font-medium">
-              <span className="w-2 h-2 bg-blue-700 rounded-full"></span>
+              <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
               ABOUT
             </div>
             <h2 className="text-4xl md:text-6xl font-extrabold text-[#171717] leading-tight">

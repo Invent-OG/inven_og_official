@@ -75,7 +75,7 @@ export default function ProjectDetails() {
             The project you&apos;re looking for doesn&apos;t exist.
           </p>
           <button
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/work")}
             className={`px-8 py-3 rounded-xl font-semibold hover:scale-105 transition-transform flex items-center gap-2 ${
               isDark ? "bg-white text-black" : "bg-black text-white"
             }`}
@@ -125,7 +125,7 @@ export default function ProjectDetails() {
 
         <div className="hero-content relative z-10 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full">
           <button
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/work")}
             className={`mb-8 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-transform flex items-center gap-2 backdrop-blur-sm ${
               isDark
                 ? "bg-black text-white hover:bg-white/20"

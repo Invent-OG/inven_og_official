@@ -88,11 +88,11 @@ export default function HomeFaq() {
   };
 
   return (
-    <section className="w-full font-serif bg-white py-20 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+    <section className="w-full  bg-white py-20 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
       {/* Left Section */}
       <div className="md:w-1/3 px-6">
         <div className="inline-flex items-center gap-2 mb-4 bg-white border rounded-full px-4 py-1 shadow-sm">
-          <div className="w-2.5 h-2.5 bg-blue-700 rounded-full"></div>
+          <div className="w-2.5 h-2.5 bg-[#0049ae] rounded-full"></div>
           <span className="text-sm font-medium text-gray-600">FAQ’S</span>
         </div>
         <h2 className="text-5xl md:text-6xl font-semibold text-gray-800 leading-tight tracking-tight">

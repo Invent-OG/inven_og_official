@@ -96,7 +96,7 @@ function OurProcess() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full font-serif min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden"
+      className="relative w-full  min-h-screen flex flex-col items-center justify-center bg-white overflow-hidden"
     >
       {/* Background Circles */}
       <div className="absolute inset-0 opacity-10">
@@ -108,7 +108,7 @@ function OurProcess() {
         {/* Header */}
         <div className="text-start px-10 mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white border border-gray-300 mb-6">
-            <span className="w-2 h-2 bg-blue-700 rounded-full mr-2 "></span>
+            <span className="w-2 h-2 bg-[#0049ae] rounded-full mr-2 "></span>
             <span className="text-gray-600 text-sm font-normal tracking-wider">
               OUR PROCESS
             </span>
@@ -154,7 +154,7 @@ function OurProcess() {
 
         {/* CTA */}
         <div className="text-start px-10 mt-16">
-          <button className="px-8 py-4 bg-blue-700 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <button className="px-8 py-4 bg-[#0049ae] rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl">
             Start Your Journey Today
           </button>
 

@@ -56,10 +56,10 @@ function PricingPlan() {
   ];
 
   return (
-    <section className="bg-white font-serif py-16 relative min-h-screen flex flex-col items-start justify-center">
+    <section className="bg-white  py-16 relative min-h-screen flex flex-col items-start justify-center">
       <div className="w-full px-10 md:px-5 max-w-6xl mx-auto">
         <div className="inline-flex items-center gap-2 mb-8 bg-white border rounded-full px-4 py-1 shadow-sm">
-          <div className="w-2.5 h-2.5 bg-blue-700 rounded-full"></div>
+          <div className="w-2.5 h-2.5 bg-[#0049ae] rounded-full"></div>
           <span className="text-sm font-medium text-gray-600">PRICING</span>
         </div>
         {/* Header */}
