@@ -163,9 +163,11 @@ export default function Footer() {
           {/* Left Column - Brand & Description */}
           <div className="footer-animate space-y-6">
             <div className="flex items-center gap-3">
-              <span className="text-xl font-bold text-white">
-                Invent <span className="text-blue-500">OG</span>
-              </span>
+              <img
+                src="/asstes/logo/og logo b.png"
+                alt="Logo"
+                className="w-32 h-6 object-contain"
+              />
             </div>
             <p className="max-w-md text-lg leading-relaxed text-gray-300">
               Building the future of digital experiences with innovative

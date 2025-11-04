@@ -267,9 +267,12 @@ export default function PageTransitionOneLayer() {
         ref={logoRef}
         className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white"
       >
-        <h1 className="text-4xl font-bold tracking-wider">
-          <span className="text-blue-200">INVENT</span>
-          <span className="text-white">OG</span>
+        <h1 className="text-4xl  font-bold tracking-wider">
+          <img
+            src="/asstes/logo/og logo b.png"
+            alt="Logo"
+            className="w-42 h-6 object-contain"
+          />
         </h1>
         <p className="text-blue-300 text-sm font-light mt-1">
           Elevate the Future

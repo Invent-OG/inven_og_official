@@ -160,13 +160,12 @@ function NavBar() {
             isMenuOpen ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
-          <span
-            ref={logoRef}
+          <img
             onClick={() => router.push("/")}
-            className="text-xl font-semibold tracking-wide cursor-pointer text-white transition-colors duration-500 mix-blend-difference"
-          >
-            Invent <span className="text-blue-600">OG</span>
-          </span>
+            src="/asstes/logo/OG logo black.png"
+            alt="Logo"
+            className="w-32 h-6 object-contain cursor-pointer"
+          />
         </div>
 
         {/* Hamburger Button */}
@@ -316,9 +315,45 @@ function NavBar() {
 
         {/* Title */}
         <div className="hidden md:block menu-title absolute bottom-0 right-0 text-[12vw] font-black text-[#ffffff] leading-none z-50">
-          <span className="block opacity-0 -translate-x-12">CODE</span>
-          <span className="block opacity-0 translate-x-12">LIKE</span>
-          <span className="block opacity-0 -translate-x-12">AN OG</span>
+          {/* 🔵 SVG Background */}
+          <div className="absolute inset-0 opacity-30 pointer-events-none flex items-center justify-center scale-250">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 29700 21000"
+              className="w-full h-full"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <linearGradient
+                  id="id0"
+                  gradientUnits="userSpaceOnUse"
+                  x1="11590.3"
+                  y1="3913.46"
+                  x2="18109.7"
+                  y2="17086.5"
+                >
+                  <stop offset="0" stopColor="#536FFE" />
+                  <stop offset="0.541176" stopColor="#39458F" />
+                  <stop offset="1" stopColor="#1F1B20" />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#id0)"
+                d="M14850 17834c52,-4032 3366,-7314 7410,-7314 -4057,0 -7380,-3304 -7410,-7354 -30,4050 -3353,7354 -7410,7354 4044,0 7358,3282 7410,7314z"
+              />
+            </svg>
+          </div>
+
+          {/* 🧠 Text Layer */}
+          <span className="block opacity-0 -translate-x-12 relative z-10">
+            CODE
+          </span>
+          <span className="block opacity-0 translate-x-12 relative z-10">
+            LIKE
+          </span>
+          <span className="block opacity-0 -translate-x-12 relative z-10">
+            AN OG
+          </span>
         </div>
       </nav>
     </div>
