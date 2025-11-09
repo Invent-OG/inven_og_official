@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function HomeService() {
   const services = [
@@ -50,6 +52,14 @@ export default function HomeService() {
       { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
     );
   }, [activeIndex]);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
+    });
+  }, []);
 
   const handleMouseEnter = () => {
     if (imageInnerRef.current) {
@@ -78,7 +88,7 @@ export default function HomeService() {
 
   return (
     <section className="bg-white  w-full py-20 flex justify-center">
-      <div className="max-w-7xl w-full px-6 lg:px-24">
+      <div data-aos="fade-right" className="max-w-7xl w-full px-6 lg:px-24">
         <div className="inline-flex mb-10 text-black/60 items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm font-medium">
           <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
           SERVICES
@@ -120,7 +130,10 @@ export default function HomeService() {
           </div>
 
           {/* RIGHT SIDE IMAGE */}
-          <div className="w-full lg:w-1/2 flex justify-center">
+          <div
+            data-aos="fade-left"
+            className="w-full lg:w-1/2 flex justify-center"
+          >
             <div className="relative rounded-lg overflow-hidden shadow-md w-full max-w-lg h-[400px] md:h-[350px] cursor-pointer">
               <div
                 ref={imageInnerRef}

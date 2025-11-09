@@ -1,14 +1,27 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { Target, Eye, Award } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function HomeAbout() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
+    });
+  }, []);
   return (
     <section className="py-20 px-6  lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto relative">
         {/* Top section */}
-        <div className="flex justify-between items-start mb-12">
+        <div
+          data-aos="fade-up"
+          className="flex justify-between items-start mb-12"
+        >
           <div>
             <div className="inline-flex mb-10 text-black/60 items-center gap-2 border border-gray-200 rounded-full px-4 py-2 text-sm font-medium">
               <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
@@ -30,7 +43,7 @@ export default function HomeAbout() {
         {/* Main content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
           {/* Left side - Mission/Vision/Awards */}
-          <div className="flex flex-col gap-8">
+          <div data-aos="fade-right" className="flex flex-col gap-8">
             {/* Mission */}
             <div className="flex items-start gap-4">
               <div className="bg-[#EEF2FF] p-4 rounded-lg flex items-center justify-center">
@@ -79,7 +92,7 @@ export default function HomeAbout() {
             </div>
           </div>
           {/* Center image +text */}
-          <div className="flex flex-col gap-6">
+          <div data-aos="fade-up" className="flex flex-col gap-6">
             <div className="overflow-hidden shadow-md rounded-tl-[6rem] rounded-br-[6rem]">
               <Image
                 src="https://images.pexels.com/photos/23496627/pexels-photo-23496627.jpeg"
@@ -98,7 +111,10 @@ export default function HomeAbout() {
           </div>
 
           {/* Right image + text */}
-          <div className="relative rounded-tl-[6rem] md:bottom-16 bottom-0 rounded-br-[6rem] overflow-hidden shadow-md">
+          <div
+            data-aos="fade-left"
+            className="relative rounded-tl-[6rem] md:bottom-16 bottom-0 rounded-br-[6rem] overflow-hidden shadow-md"
+          >
             <Image
               src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
               alt="Team at work"

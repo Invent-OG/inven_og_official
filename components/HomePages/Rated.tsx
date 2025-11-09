@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +87,14 @@ function Rated() {
 
     return () => ctx.revert();
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
+    });
+  }, []);
 
   const getTargetNumber = (numberStr: string) => {
     if (numberStr.includes("K")) return parseInt(numberStr) * 1000;
@@ -104,7 +114,10 @@ function Rated() {
       ref={sectionRef}
       className="bg-white  py-24 flex flex-col items-center justify-center"
     >
-      <div className="max-w-6xl w-full px-5 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div
+        data-aos="fade-up"
+        className="max-w-6xl w-full px-5 grid grid-cols-2 md:grid-cols-4 gap-10 text-center"
+      >
         {stats.map((item, index) => (
           <div
             key={index}

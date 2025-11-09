@@ -2,6 +2,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { Plus, Minus } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqs = [
   {
@@ -44,6 +46,14 @@ export default function HomeFaq() {
     faqs.forEach((_, i) => {
       const content = faqRefs.current[i];
       if (content) gsap.set(content, { height: 0, opacity: 0 });
+    });
+  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
     });
   }, []);
 
@@ -90,7 +100,7 @@ export default function HomeFaq() {
   return (
     <section className="w-full  bg-white py-20 px-6 md:px-16 lg:px-24 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
       {/* Left Section */}
-      <div className="md:w-1/3 px-6">
+      <div data-aos="fade-up" className="md:w-1/3 px-6">
         <div className="inline-flex items-center gap-2 mb-4 bg-white border rounded-full px-4 py-1 shadow-sm">
           <div className="w-2.5 h-2.5 bg-[#0049ae] rounded-full"></div>
           <span className="text-sm font-medium text-gray-600">FAQ’S</span>
@@ -109,7 +119,10 @@ export default function HomeFaq() {
       </div>
 
       {/* Right Section */}
-      <div className="md:w-2/3 flex flex-col divide-y divide-gray-200">
+      <div
+        data-aos="fade-up"
+        className="md:w-2/3 flex flex-col divide-y divide-gray-200"
+      >
         {faqs.map((faq, index) => (
           <div key={index} className="py-6">
             <button

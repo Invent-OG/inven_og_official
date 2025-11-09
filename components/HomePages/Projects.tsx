@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRouter } from "next/navigation";
 import { projectsData } from "@/data/projectsData"; // import your array
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,10 +27,18 @@ function Projects() {
   const handleCardClick = (id: number) => {
     router.push(`/projects/${id}`);
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
+    });
+  }, []);
 
   return (
     <section ref={sectionRef} className="min-h-screen  bg-white py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div data-aos="fade-left" className="max-w-6xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200 text-gray-700 text-sm font-medium mb-6">
           <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full"></div>
           Our Projects
@@ -36,7 +46,7 @@ function Projects() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl font-bold text-start text-gray-900 mb-4">
-            My <span className="text-black">Projects</span>
+            Our <span className="text-black">Portfolio</span>
           </h2>
           <p className="text-lg text-gray-600 text-start max-w-2xl">
             A showcase of my latest web, AI, and full-stack projects — combining
@@ -45,7 +55,10 @@ function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          data-aos="fade-right"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {visibleProjects.map((project) => (
             <div
               key={project.id}

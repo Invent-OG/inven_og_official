@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
@@ -70,6 +72,14 @@ export default function HomeTestimonial() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // animation duration in ms
+      easing: "ease-in-out", // smoothness
+      once: false, // whether animation should happen only once
+      offset: 100, // how far from top before trigger
+    });
+  }, []);
 
   // Animate cards on mount
   useEffect(() => {
@@ -85,7 +95,7 @@ export default function HomeTestimonial() {
   return (
     <section className="testimonial-section  py-16 md:py-20 bg-white">
       {/* Header */}
-      <div className="max-w-6xl mx-auto px-6 text-start">
+      <div data-aos="fade-right" className="max-w-6xl mx-auto px-6 text-start">
         <div className="inline-flex items-center border border-gray-400 rounded-full p-2 gap-2 mb-4 md:mb-6">
           <span className="w-2 h-2 bg-[#0049ae] rounded-full"></span>
           <span className="text-black/70 uppercase text-xs md:text-sm font-medium">
@@ -103,6 +113,7 @@ export default function HomeTestimonial() {
         ref={containerRef}
       >
         <div
+          data-aos="fade-right"
           className="flex gap-6 transition-transform duration-1000"
           style={{ transform: `translateX(-${visibleStart * (100 / 4)}%)` }}
         >
