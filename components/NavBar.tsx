@@ -207,7 +207,7 @@ function NavBar() {
         <ul className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center md:items-start md:pl-[10%] space-y-6 z-50">
           {[
             { name: "Work", href: "/work" },
-            { name: "About", href: "/about" },
+            { name: "Blog", href: "/blog" },
             { name: "Services", href: "" },
             { name: "Contact", href: "/contact" },
           ].map((item, i) => (
