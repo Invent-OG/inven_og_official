@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "E-commerce Solutions",
+  description:
+    "Build robust and scalable e-commerce platforms that drive sales and customer loyalty.",
+};
+
 export default page;

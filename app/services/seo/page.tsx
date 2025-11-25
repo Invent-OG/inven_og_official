@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SEO Services & Optimization",
+  description:
+    "Boost your search rankings and drive organic traffic with our expert SEO services.",
+};
+
 export default page;

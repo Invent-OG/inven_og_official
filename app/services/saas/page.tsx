@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SaaS Development Services",
+  description:
+    "End-to-end SaaS product development, from MVP to full-scale enterprise solutions.",
+};
+
 export default page;

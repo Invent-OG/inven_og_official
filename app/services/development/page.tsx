@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Custom Web Development Services",
+  description:
+    "Scalable, high-performance web development solutions tailored to your business needs.",
+};
+
 export default page;

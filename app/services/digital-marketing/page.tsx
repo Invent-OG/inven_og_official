@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Digital Marketing Strategies",
+  description:
+    "Data-driven digital marketing strategies to grow your brand and increase ROI.",
+};
+
 export default page;

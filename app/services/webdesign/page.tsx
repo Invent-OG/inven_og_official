@@ -23,4 +23,12 @@ function page() {
   );
 }
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Creative Web Design Services",
+  description:
+    "Stunning, user-centric web designs that captivate your audience and elevate your brand.",
+};
+
 export default page;
