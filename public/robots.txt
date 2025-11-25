@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://inventog.com
+
+# Sitemaps
+Sitemap: https://inventog.com/sitemap.xml

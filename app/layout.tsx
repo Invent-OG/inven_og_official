@@ -61,11 +61,58 @@ import { League_Spartan } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import { Metadata } from "next";
 
 // ✅ Import Google Font: League Spartan
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  title: {
+    default: "InventOG | Innovation in Every Pixel",
+    template: "%s | InventOG",
+  },
+  description:
+    "InventOG is a leading digital agency specializing in web development, design, and AI solutions. We build the future of the web.",
+  keywords: [
+    "Web Development",
+    "UI/UX Design",
+    "AI Solutions",
+    "Digital Agency",
+    "Next.js",
+    "React",
+    "InventOG",
+  ],
+  authors: [{ name: "InventOG Team" }],
+  creator: "InventOG",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://inventog.com",
+    title: "InventOG | Innovation in Every Pixel",
+    description:
+      "InventOG is a leading digital agency specializing in web development, design, and AI solutions.",
+    siteName: "InventOG",
+    images: [
+      {
+        url: "/og-image.jpg", // Ensure this image exists in public folder
+        width: 1200,
+        height: 630,
+        alt: "InventOG - Innovation in Every Pixel",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "InventOG | Innovation in Every Pixel",
+    description:
+      "InventOG is a leading digital agency specializing in web development, design, and AI solutions.",
+    images: ["/og-image.jpg"],
+    creator: "@inventog",
+  },
+  metadataBase: new URL("https://inventog.com"),
+};
 
 // ✅ Client-side transition wrapper
 function TransitionWrapper({ children }: { children: ReactNode }) {
@@ -94,6 +141,28 @@ export default function RootLayout({
         <TransitionWrapper>{children}</TransitionWrapper>
 
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "InventOG",
+              url: "https://inventog.com",
+              logo: "https://inventog.com/logo.png",
+              sameAs: [
+                "https://twitter.com/inventog",
+                "https://linkedin.com/company/inventog",
+                "https://instagram.com/inventog",
+              ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-555-555-5555",
+                contactType: "customer service",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );
