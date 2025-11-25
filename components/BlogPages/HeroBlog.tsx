@@ -229,6 +229,48 @@ export default function HeroBlog() {
                     </span>
                   ))}
                 </div>
+
+                {/* Related Blogs Section */}
+                <div className="mt-16 pt-10 border-t border-gray-200">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    Related Articles
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {blogs
+                      .filter(
+                        (blog) =>
+                          blog.category === blogs[activeBlog].category &&
+                          blog.id !== blogs[activeBlog].id
+                      )
+                      .slice(0, 2)
+                      .map((relatedBlog) => (
+                        <div
+                          key={relatedBlog.id}
+                          onClick={() => {
+                            const index = blogs.findIndex(
+                              (b) => b.id === relatedBlog.id
+                            );
+                            if (index !== -1) handleBlogClick(index);
+                          }}
+                          className="group cursor-pointer"
+                        >
+                          <div className="h-48 rounded-xl overflow-hidden mb-4">
+                            <img
+                              src={relatedBlog.image}
+                              alt={relatedBlog.title}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                          <h4 className="font-bold text-lg text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            {relatedBlog.title}
+                          </h4>
+                          <p className="text-gray-500 text-sm line-clamp-2">
+                            {relatedBlog.excerpt}
+                          </p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
               </div>
             </div>
           )}
